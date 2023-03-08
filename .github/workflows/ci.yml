@@ -11,6 +11,9 @@ on:
 
 jobs:
   build:
+    defaults:
+      run:
+        working-directory: 'api'
     runs-on: ubuntu-latest
 
     strategy:
@@ -25,9 +28,5 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - name: Install
-      run: npm ci
-      working-directory: ./api
-    - name: Test
-      run: npm test
-      working-directory: ./api
+    - run: npm ci
+    - run: npm test
