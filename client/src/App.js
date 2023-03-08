@@ -30,7 +30,7 @@ function App() {
 
   return (
     <>
-      <h1>Test Application</h1>
+      <h1>hello world</h1>
       <button onClick={get_example}>GET</button>
       <button onClick={post_example}>POST</button>
     </>
